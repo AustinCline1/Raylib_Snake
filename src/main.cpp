@@ -5,8 +5,8 @@
 
 
 
-Color green = {173,204,96,255};
-Color darkGreen = {43,51,24,255};
+Color blue = {50,175,207,255};
+Color darkBlue = {8,83,102,255};
 
 
 int cellSize = 30; 
@@ -54,7 +54,7 @@ class Snake
 				float x = body[i].x;
 				float y = body[i].y;
 				Rectangle rect = {offset + x*cellSize,offset + y*cellSize,(float)cellSize,(float)cellSize};
-				DrawRectangleRounded(rect,0.5,6,darkGreen);	
+				DrawRectangleRounded(rect,0.5,6,darkBlue);	
 			}
 
 		}
@@ -239,10 +239,10 @@ int main()
 		game.snake.direction = Vector2{1,0};
 		game.running = true;
 	}
-	ClearBackground(green);
-	DrawRectangleLinesEx(Rectangle{(float)offset-5,(float)offset-5,(float)cellSize*cellCount+10,(float)cellSize*cellCount+10},5,darkGreen);
-	DrawText("Retro Snake",offset -5, 20,40,darkGreen);
-	DrawText(TextFormat("%i", game.score),offset-5, offset + cellSize * cellCount +10 ,40,darkGreen);
+	ClearBackground(blue);
+	DrawRectangleLinesEx(Rectangle{(float)offset-5,(float)offset-5,(float)cellSize*cellCount+10,(float)cellSize*cellCount+10},5,darkBlue);
+	DrawText("Retro Snake",offset -5, 20,40,darkBlue);
+	DrawText(TextFormat("%i", game.score),offset-5, offset + cellSize * cellCount +10 ,40,darkBlue);
 	game.Draw();
 	EndDrawing();
 	}
